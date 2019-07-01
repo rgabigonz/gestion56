@@ -1,0 +1,10 @@
+composer create-project laravel/laravel gestion56 5.6.* --prefer-dist
+npm install --save vuex vue-router validate.js
+npm i
+
+php artisan make:migration create_clientes_table --create="clientes"
+
+composer require tymon/jwt-auth
+https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
+
+https://github.com/AfikDeri/Vue-Laravel-SPA/blob/master/resources/assets/js/app.js
