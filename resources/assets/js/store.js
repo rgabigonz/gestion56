@@ -48,11 +48,24 @@ export default {
             localStorage.removeItem("user");
             state.isLoggedIn = false;
             state.currentUser = null;
+        },
+        updateClientes(state, payload) {
+            state.clientes = payload;
         }
     },
     actions: {
         login(context) {
             context.commit("login");
+        },
+        getClientes(context) {
+            axios.get('/api/clientes', {
+                headers: {
+                    "Authorization": `Bearer ${context.state.currentUser.token}`
+                }
+            })
+            .then((response) => {
+                context.commit('updateClientes', response.data.clientes);
+            })
         }
     },
 };

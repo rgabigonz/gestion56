@@ -9,10 +9,10 @@
                 <ul class="navbar-nav ml-auto">
                     <template v-if="!currentUser">
                         <li>
-                            <router-link to="/login" class="nav-link">Login</router-link>
+                            <router-link to="/login" class="nav-link">Ingresar</router-link>
                         </li>
                         <li>
-                            <router-link to="/register" class="nav-link">Register</router-link>
+                            <router-link to="/register" class="nav-link">Registrarse</router-link>
                         </li>
                     </template>
                     <template v-else>
